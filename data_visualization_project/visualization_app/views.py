@@ -7,7 +7,9 @@ def index(request):
     return HttpResponse('hello')
 
 def interactive_plot(request):
-    return HttpResponse('here is the interactive plot page')
+
+    return render(request, 'visualization/interactive.html')
 
 def static_plot(request):
-    return HttpResponse('here is the static plot page')
+    example_dict = {'example':'example variable on django template'}
+    return render(request, 'visualization/static.html',context=example_dict)
