@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization App</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Visualization Application</h1>
+    <p>In this application, there are some example of data Visualization in two python libraries: Bokeh and Matplotlib.</p>
+    <button><a href="{% url 'visualization_app:static' %}" style="text-decoration: none;">Static</a></button>
+    <button><a href="{% url 'visualization_app:interactive' %}" style="text-decoration: none;">Interactive</a></button>
+    <button><a href="{% url 'index' %}" style="text-decoration: none;">Home</a></button>
+    {% block content%}
+    {% endblock %}
+    <!-- <img src="{% static "images/data-Visualisation-2-1.jpg" %}" alt=""> -->
+    
+</body>
+</html>
