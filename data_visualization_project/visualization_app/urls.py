@@ -6,6 +6,6 @@ app_name = 'visualization_app'
 
 urlpatterns = [
     path('interactive', views.interactive_plot, name="interactive"),
-    path('static', views.static_plot, name="static")
+    path('static_plot', views.static_plot, name="static_plot")
 
 ]

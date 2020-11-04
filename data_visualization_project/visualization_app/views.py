@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .static import bar_plot
+
 # Create your views here.
 
 def index(request):
@@ -11,5 +13,6 @@ def interactive_plot(request):
     return render(request, 'visualization/interactive.html')
 
 def static_plot(request):
-    example_dict = {'example':'example variable on django template'}
-    return render(request, 'visualization/static.html',context=example_dict)
+    if request.method == 'POST':
+        print(form.data['x-static'])
+    return render(request, 'visualization/static_plot.html')
