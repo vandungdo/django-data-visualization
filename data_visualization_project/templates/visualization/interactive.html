@@ -1,4 +1,25 @@
 {% extends "index.html" %}
 {% block content %}
-<h1>Interactive plot</h1>
+<form>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Select Visualization Type</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Bar Plot</option>
+          <option>Scatter Plot</option>
+          <option>Line Plot</option>
+          <option>Pie Chart</option>
+        </select>
+      
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"><strong>X-Axis Array</strong></label>
+      <input type="text" class="form-control" id="exampleInputPassword1" name="x-interactive" placeholder="enter array in form [1,2,3,...]">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Y-Axis Array</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="y-interactive" placeholder="enter array in form [a,b,c,...]">
+      </div>
+    
+    <button type="submit" id="send">Submit</button>
+  </form>
 {% endblock %}
