@@ -14,5 +14,6 @@ def interactive_plot(request):
 
 def static_plot(request):
     if request.method == 'POST':
-        print(form.data['x-static'])
+        # print(request.POST['plot-type'])
+        bar_plot(request.POST['x-static'],request.POST['y-static'])
     return render(request, 'visualization/static_plot.html')

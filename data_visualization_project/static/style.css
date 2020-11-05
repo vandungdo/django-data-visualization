@@ -6,6 +6,9 @@
     font-family: 'BioRhyme', serif;
     height: 100%;
     background: linear-gradient(to right,#e6e4df, #706f6c) ;
+    text-align: center;
+    vertical-align: middle;
+    display: block;
     
 }
 
@@ -38,4 +41,12 @@ button:hover {
 }
 label {
     text-shadow: 1px 1px;
+}
+img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
 }

@@ -1,9 +1,10 @@
 {% extends "index.html" %}
 {% block content %}
-<form> 
+<form action="{% url 'visualization_app:static_plot' %}" method="POST">  
+  {% csrf_token %}
     <div class="form-group">
         <label for="exampleFormControlSelect1">Select Visualization Type</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select class="form-control" id="exampleFormControlSelect1" name="plot-type">
           <option>Bar Plot</option>
           <option>Scatter Plot</option>
           <option>Line Plot</option>
@@ -22,4 +23,8 @@
     
     <button type="submit" id="send">Submit</button>
   </form>
+  <div class="content">
+  {% load static %}
+  <img src="{% static 'plots/tmp.png' %}" alt="">
+</div>
 {% endblock %}
